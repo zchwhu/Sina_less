@@ -1,0 +1,202 @@
+@charset "utf-8";
+@font-face {
+  font-family: swbficon;
+  src: url('../fonts/swbficon-webfont.eot');
+  src: url('../fonts/swbficon-webfont.woff') format('woff'), url('../fonts/swbficon-webfont.ttf') format('truetype'), url('../fonts/swbficon-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: wbficon;
+  src: url('../fonts/wbficon-webfont.eot');
+  src: url('../fonts/wbficon-webfont.woff') format('woff'), url('../fonts/wbficon-webfont.ttf') format('truetype'), url('../fonts/wbficon-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.wbficon {
+  font-family: wbficon;
+}
+body {
+  background-color: #b4daf0;
+  background-image: url("../img/body_repeat.png");
+  background-position: center 0;
+  background-repeat: repeat-x;
+}
+.wb {
+  padding-top: 50px;
+  background: rgba(0, 0, 0, 0) url("../img/body_bg.jpg") no-repeat scroll center top;
+}
+.wb-top {
+  position: fixed;
+  border-top: 2px solid #eb7350;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background-color: #ffffff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+}
+.wb-top-inner {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wb-top-logo {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 48px;
+}
+.wb-top-logo > a {
+  height: 48px;
+  display: block;
+  position: absolute;
+  width: 190px;
+  left: -50px;
+}
+.wb-top-logo > a > span {
+  display: block;
+  width: 140px;
+  margin-left: 50px;
+  height: 48px;
+  background: url("../img/WB_logo.png") no-repeat center 40%;
+}
+.wb-top-search {
+  float: left;
+  width: 468px;
+  background-color: #f2f2f5;
+  border: 1px solid #cccccc;
+  margin-top: 9px;
+  position: relative;
+}
+.wb-top-search > input {
+  height: 20px;
+  padding: 4px 33px 4px 10px;
+  border: none;
+  width: 425px;
+  background-color: transparent;
+}
+.wb-top-search > a {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  font-size: 18px;
+  color: #696e78;
+}
+.wb-top-search > a:hover {
+  color: #eb7350;
+}
+.wb-top-pos {
+  float: right;
+  margin-left: -11px;
+}
+.wb-top-pos .wbficon {
+  font-size: 22px;
+}
+.wb-top-pos a {
+  color: #696e78;
+}
+.wb-top-pos a:hover {
+  color: #eb7350;
+}
+.wb-top-nav {
+  float: left;
+  margin: 11px 20px 11px 0;
+}
+.wb-top-nav {
+  float: left;
+}
+.wb-top-nav li {
+  display: inline;
+  margin-left: 26px;
+  font-size: 14px;
+}
+.wb-top-nav li.active a {
+  color: #eb7350;
+}
+.wb-top-nav a {
+  display: inline-block;
+  line-height: 26px;
+  height: 26px;
+}
+.wb-top-nav a:hover {
+  color: #eb7350;
+}
+.wb-top-nav span {
+  vertical-align: top;
+}
+.wb-top-user {
+  float: left;
+  margin: 12px 10px 12px 0;
+  border-left: 1px solid #d9d9d9;
+}
+.wb-top-user > div {
+  position: relative;
+  margin-left: 21px;
+  display: inline-block;
+  float: left;
+}
+.wb-top-msg .msg-num {
+  position: absolute;
+  color: #ffffff;
+  top: -3px;
+  right: -16px;
+  background-color: #eb7350;
+  font-size: 11px;
+  min-width: 18px;
+  padding: 0 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+  text-align: center;
+}
+.wb-top-edit {
+  width: 26px;
+  height: 24px;
+  background-color: #eb7350;
+  text-align: center;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.wb-top-edit span {
+  color: #ffffff;
+}
+.wb-body {
+  background-color: rgba(70, 149, 194, 0.3);
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 16px;
+}
+.wb-body-aside {
+  width: 150px;
+}
+.wb-body-aside ul {
+  padding-bottom: 11px;
+}
+.wb-body-aside a {
+  color: #ffffff;
+  display: block;
+  line-height: 34px;
+  height: 34px;
+  font-size: 14px;
+  padding: 0 0 0 15px;
+  position: relative;
+}
+.wb-body-aside a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+}
+.wb-aside-my {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.wb-aside-my a {
+  font-weight: 700;
+}

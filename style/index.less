@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+//图标字体定义区域
+@font-face {
+  font-family: swbficon;
+  src: url('../fonts/swbficon-webfont.eot');
+  src: url('../fonts/swbficon-webfont.woff') format('woff'),
+  url('../fonts/swbficon-webfont.ttf') format('truetype'),
+  url('../fonts/swbficon-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wbficon;
+  src: url('../fonts/wbficon-webfont.eot');
+  src: url('../fonts/wbficon-webfont.woff') format('woff'),
+  url('../fonts/wbficon-webfont.ttf') format('truetype'),
+  url('../fonts/wbficon-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wbficon{
+  .wbficon();
+}
+
+.tc(){
+  text-align: center;
+}
+//颜色定义区域
+@mainColor:#eb7350;
+@fontColor:#333;
+@mainBgColor:#fff;
+
+.mainColor(){
+  color: @mainColor;
+}
+
+.fontColor(@Color:@fontColor){
+  color: @Color;
+}
+
+.hoverColor(@color:@mainColor){
+  color: @color;
+}
+
+.mainBgColor(@bgColor:@mainBgColor){
+  background-color: @bgColor;
+}
+
+.wbficon(){
+  font-family: wbficon;
+}
+
+//阴影定义区域
+.boxShadow(){
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+}
+//边框定义区域
+.border(top,@border_w:1px,@border_s:solid,@border_c){
+  border-top: @border_w @border_s @border_c;
+}
+
+.border(bottom,@border_w:1px,@border_s:solid,@border_c){
+  border-bottom: @border_w @border_s @border_c;
+}
+
+.border(left,@border_w:1px,@border_s:solid,@border_c){
+  border-left: @border_w @border_s @border_c;
+}
+
+.border(right,@border_w:1px,@border_s:solid,@border_c){
+  border-right: @border_w @border_s @border_c;
+}
+
+.border(all,@border_w:1px,@border_s:solid,@border_c){
+  border: @border_w @border_s @border_c;
+}
+
+.border(none,@border_w:1px,@border_s:solid,@border_c){
+  border: none;
+}
+
+
+//尺寸定义区域
+@topWidth:1280px;
+@topHeight:48px;
+@topSearhW:468px;
+@mainWidth:1000px;
+
+//位置定义区域
+.horizonCenter(){
+  margin-left: auto;
+  margin-right: auto;
+}
+.fl(){
+  float: left;
+}
+
+.fr(){
+  float: right;
+}
+
+.borRaduis(@radius:2px){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+body{
+  background-color: #b4daf0;
+  background-image: url("../img/body_repeat.png");
+  background-position: center 0;
+  background-repeat: repeat-x;
+}
+
+.wb{
+  padding-top: 50px;
+  background: rgba(0, 0, 0, 0) url("../img/body_bg.jpg") no-repeat scroll center top;
+}
+
+.wb-top{
+  position: fixed;
+  .border(top,2px,solid,@mainColor);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: @topHeight;
+  .mainBgColor();
+  .boxShadow();
+  z-index: 9999;
+}
+
+.wb-top-inner{
+  width: @topWidth;
+  .horizonCenter();
+}
+
+.wb-top-logo{
+  .fl();
+  position: relative;
+  width: 140px;
+  height: @topHeight;
+  >a{
+    height: @topHeight;
+    display: block;
+    position: absolute;
+    width: 190px;
+    left: -50px;
+    >span{
+      display: block;
+      width: 140px;
+      margin-left: 50px;
+      height: @topHeight;
+      background: url("../img/WB_logo.png") no-repeat center 40%;
+    }
+  }
+}
+
+.wb-top-search{
+  .fl();
+  width: @topSearhW;
+  .mainBgColor(#F2F2F5);
+  .border(all,1px,solid,#ccc);
+  margin-top: 9px;
+  position: relative;
+  >input{
+    height: 20px;
+    padding: 4px 33px 4px 10px;
+    .border(none,0px,solid,transparent);
+    width: 425px;
+    .mainBgColor(transparent);
+  }
+  >a{
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    font-size: 18px;
+    .fontColor(#696e78);
+    &:hover{
+      .hoverColor();
+    }
+  }
+}
+
+.wb-top-pos{
+  .fr();
+  margin-left: -11px;
+  .wbficon{
+    font-size: 22px;
+  }
+  a{
+    .fontColor(#696e78);
+    &:hover{
+      .fontColor(@mainColor);
+    }
+  }
+}
+
+.wb-top-nav{
+  .fl();
+  margin: 11px 20px 11px 0;
+}
+
+.wb-top-nav{
+  .fl();
+  li{
+    display: inline;
+    margin-left: 26px;
+    font-size: 14px;
+    &.active{
+      a{
+        .fontColor(@mainColor);
+      }
+    }
+  }
+  a{
+    display: inline-block;
+    &:hover{
+      .hoverColor();
+    }
+    line-height: 26px;
+    height: 26px;
+  }
+  span{
+    vertical-align: top;
+  }
+}
+
+.wb-top-user{
+  .fl();
+  margin: 12px 10px 12px 0;
+  .border(left,1px,solid,#d9d9d9);
+  > div{
+    position: relative;
+    margin-left: 21px;
+    display: inline-block;
+    float: left;
+  }
+}
+
+.wb-top-msg{
+  .msg-num{
+    position: absolute;
+    .fontColor(#fff);
+    top: -3px;
+    right: -16px;
+    .mainBgColor(@mainColor);
+    font-size: 11px;
+    min-width: 18px;
+    padding: 0 2px;
+    .borRaduis();
+    .border(all,1px,solid,#fff);
+    .tc();
+  }
+}
+
+.wb-top-edit{
+  width: 26px;
+  height: 24px;
+  .mainBgColor(@mainColor);
+  .tc();
+  .borRaduis();
+  span{
+    .fontColor(#fff);
+  }
+}
+
+.wb-body{
+  .mainBgColor(rgba(70, 149, 194, 0.3));
+  width: @mainWidth;
+  .horizonCenter();
+  padding-top: 16px;
+}
+
+.wb-body-aside{
+  width: 150px;
+  ul{
+    padding-bottom: 11px;
+  }
+  a{
+    .fontColor(#fff);
+    display: block;
+    line-height: 34px;
+    height: 34px;
+    font-size: 14px;
+    padding: 0 0 0 15px;
+    &:hover{
+      .mainBgColor(rgba(255,255,255,.2));
+    }
+    position: relative;
+  }
+}
+
+.dot{
+  position: absolute;
+  width: 6px;
+  height: 6px;
+}
+
+.wb-aside-my{
+  .border(bottom,1px,solid,rgba(255,255,255,.2));
+  a{
+    font-weight: 700;
+  }
+}
+
