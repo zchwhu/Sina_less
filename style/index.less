@@ -96,6 +96,7 @@
 @topHeight:48px;
 @topSearhW:468px;
 @mainWidth:1000px;
+@rightWidth:230px;
 
 //位置定义区域
 .horizonCenter(){
@@ -453,10 +454,6 @@ fieldset{
   }
 }
 
-.box-footer{
-
-}
-
 @kindH:24px;
 .box-footer-kind{
   .fl();
@@ -650,3 +647,265 @@ fieldset{
     line-height: @navFooterH;
   }
 }
+
+
+.wb-body-right{
+  width: @rightWidth;
+  margin-right: 10px;
+  .fr();
+  >div{
+    .boxShadow();
+    margin-bottom: 10px;
+    .mainBgColor();
+    .borRadius();
+  }
+}
+
+@userHeaderH:75px;
+
+.user-box-header{
+  height: 75px;
+  position: relative;
+  background: url('../img/user_bg.jpg') no-repeat center 100%/100%;
+}
+
+.user-avatar{
+  display: inline-block;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -30px;
+  img{
+    display: block;
+    width: 60px;
+    height: 60px;
+    .borRadius(50%);
+  }
+}
+
+.user-box-body{
+  padding: 16px 16px 9px;
+  .mainBgColor();
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.user-info{
+  >a{
+    font-weight: 700;
+    .fontColor();
+    &:hover{
+      .fontColor(@mainColor);
+    }
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .tc();
+  padding-top: 5px;
+}
+
+.imgIcon(@posX,@posY){
+  background: url("../img/icon.png") no-repeat center;
+  background-position: @posX @posY;
+}
+
+.user-mem,.user-lev{
+  display: inline-block;
+}
+
+.user-mem{
+  .imgIcon(0,-200px);
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.user-lev{
+  .mainBgColor(@mainColor);
+  .borRadius(8px);
+  i{
+    padding: 0 5px 0 3px;
+    width: 25px;
+    line-height: 14px;
+    height: 14px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+    .tc();
+  }
+}
+
+.user-atte{
+  margin-top: 10px;
+  >li{
+    .fl();
+    width: 65px;
+    .border(right,1px,solid,#d9d9d9);
+    text-align: center;
+    &:last-child{
+      .border(right,0px,solid,#d9d9d9);
+    }
+    a{
+      font-weight: 700;
+      .fontColor();
+      &:hover{
+        .fontColor(@mainColor);
+      }
+      line-height: 18px;
+      display: block;
+    }
+    p{
+      font-size: 12px;
+      line-height: 16px;
+      .fontColor(#808080);
+    }
+  }
+}
+
+@boxTitleH:38px;
+.wb-box-title{
+  padding: 0 16px;
+  height: @boxTitleH;
+  line-height: @boxTitleH;
+  a{
+    font-weight: 700;
+    .fontColor();
+    font-size: 14px;
+    &:hover{
+      .fontColor(@mainColor);
+    }
+  }
+}
+
+.wb-box-item{
+  padding: 6px;
+  .border(top,1px,solid,#f2f2f5);
+}
+
+.wb-box-wrapper{
+  padding: 0 10px;
+}
+
+.wb-box-pic{
+  .fl();
+  margin-right: 5px;
+  img{
+    width: 72px;
+    height: 96px;
+    display: block;
+  }
+}
+
+@boxContH:36px;
+.wb-box-content{
+  overflow: hidden;
+  height: @boxContH;
+  line-height: @boxContH;
+}
+
+@conTitleNumH:15px;
+.wb-box-con-title{
+  .fontColor();
+  font-size: 14px;
+  margin: 3px 0;
+  line-height: 16px;
+  &:hover{
+    .fontColor(@mainColor);
+  }
+  span{
+    .fontColor(#fff);
+    width: @conTitleNumH;
+    height: @conTitleNumH;
+    line-height: @conTitleNumH+1;
+    display: inline-block;
+    font-weight: normal;
+    .borRadius(50%);
+    .tc();
+    .mainBgColor(@mainColor);
+  }
+}
+
+.wb-box-txt{
+  .fontColor(#808080);
+  font-size: 12px;
+  line-height: 20px;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wb-box-grade{
+  .fr();
+  .fontColor(#808080);
+  font-size: 12px;
+}
+
+.wb-box-focus .wb-box-con-title{
+  font-weight: 700;
+}
+
+.wb-box-focus .wb-box-grade{
+  margin-top: 10px;
+}
+
+.wb-box-focus .wb-box-con-title span{
+  .mainBgColor(#DF3E3E);
+}
+
+.wb-box-focus .wb-box-wrapper{
+  padding: 0;
+}
+
+.wb-box-focus .wb-box-content{
+  padding-right: 10px;
+  height: 96px;
+  line-height: 14px;
+}
+
+@boxFooterH:35px;
+.wb-box-footer{
+  .tc();
+  font-size: 12px;
+  line-height: @boxFooterH;
+  height: @boxFooterH;
+  a{
+    .fontColor();
+    &:hover{
+      .fontColor(@mainColor);
+    }
+  }
+  .border(top,1px,solid,#d9d9d9);
+}
+
+.wb-top-list{
+  padding: 16px;
+  font-size: 12px;
+  .border(top,1px,solid,#f2f2f5);
+}
+
+.wb-top-item{
+  padding: 8px 0 5px;
+  a{
+    .fontColor();
+    &:hover{
+      .fontColor(@mainColor);
+    }
+  }
+  span{
+    .fr();
+    .fontColor(#808080);
+  }
+}
+
+.wb-box-title .topic-change{
+  font-size: 12px;
+  font-weight: 400;
+  .fr();
+  .fontColor(#696e78);
+  span{
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+

@@ -507,3 +507,236 @@ fieldset legend a {
   color: #eb7350;
   line-height: 30px;
 }
+.wb-body-right {
+  width: 230px;
+  margin-right: 10px;
+  float: right;
+}
+.wb-body-right > div {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.user-box-header {
+  height: 75px;
+  position: relative;
+  background: url('../img/user_bg.jpg') no-repeat center 1%;
+}
+.user-avatar {
+  display: inline-block;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -30px;
+}
+.user-avatar img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.user-box-body {
+  padding: 16px 16px 9px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.user-info {
+  text-align: center;
+  padding-top: 5px;
+}
+.user-info > a {
+  font-weight: 700;
+  color: #333333;
+  font-size: 14px;
+  line-height: 16px;
+}
+.user-info > a:hover {
+  color: #eb7350;
+}
+.user-mem,
+.user-lev {
+  display: inline-block;
+}
+.user-mem {
+  background: url("../img/icon.png") no-repeat center;
+  background-position: 0 -200px;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+.user-lev {
+  background-color: #eb7350;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.user-lev i {
+  padding: 0 5px 0 3px;
+  width: 25px;
+  line-height: 14px;
+  height: 14px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+.user-atte {
+  margin-top: 10px;
+}
+.user-atte > li {
+  float: left;
+  width: 65px;
+  border-right: 1px solid #d9d9d9;
+  text-align: center;
+}
+.user-atte > li:last-child {
+  border-right: 0px solid #d9d9d9;
+}
+.user-atte > li a {
+  font-weight: 700;
+  color: #333333;
+  line-height: 18px;
+  display: block;
+}
+.user-atte > li a:hover {
+  color: #eb7350;
+}
+.user-atte > li p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #808080;
+}
+.wb-box-title {
+  padding: 0 16px;
+  height: 38px;
+  line-height: 38px;
+}
+.wb-box-title a {
+  font-weight: 700;
+  color: #333333;
+  font-size: 14px;
+}
+.wb-box-title a:hover {
+  color: #eb7350;
+}
+.wb-box-item {
+  padding: 6px;
+  border-top: 1px solid #f2f2f5;
+}
+.wb-box-wrapper {
+  padding: 0 10px;
+}
+.wb-box-pic {
+  float: left;
+  margin-right: 5px;
+}
+.wb-box-pic img {
+  width: 72px;
+  height: 96px;
+  display: block;
+}
+.wb-box-content {
+  overflow: hidden;
+  height: 36px;
+  line-height: 36px;
+}
+.wb-box-con-title {
+  color: #333333;
+  font-size: 14px;
+  margin: 3px 0;
+  line-height: 16px;
+}
+.wb-box-con-title:hover {
+  color: #eb7350;
+}
+.wb-box-con-title span {
+  color: #ffffff;
+  width: 15px;
+  height: 15px;
+  line-height: 16px;
+  display: inline-block;
+  font-weight: normal;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #eb7350;
+}
+.wb-box-txt {
+  color: #808080;
+  font-size: 12px;
+  line-height: 20px;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wb-box-grade {
+  float: right;
+  color: #808080;
+  font-size: 12px;
+}
+.wb-box-focus .wb-box-con-title {
+  font-weight: 700;
+}
+.wb-box-focus .wb-box-grade {
+  margin-top: 10px;
+}
+.wb-box-focus .wb-box-con-title span {
+  background-color: #df3e3e;
+}
+.wb-box-focus .wb-box-wrapper {
+  padding: 0;
+}
+.wb-box-focus .wb-box-content {
+  padding-right: 10px;
+  height: 96px;
+  line-height: 14px;
+}
+.wb-box-footer {
+  text-align: center;
+  font-size: 12px;
+  line-height: 35px;
+  height: 35px;
+  border-top: 1px solid #d9d9d9;
+}
+.wb-box-footer a {
+  color: #333333;
+}
+.wb-box-footer a:hover {
+  color: #eb7350;
+}
+.wb-top-list {
+  padding: 16px;
+  font-size: 12px;
+  border-top: 1px solid #f2f2f5;
+}
+.wb-top-item {
+  padding: 8px 0 5px;
+}
+.wb-top-item a {
+  color: #333333;
+}
+.wb-top-item a:hover {
+  color: #eb7350;
+}
+.wb-top-item span {
+  float: right;
+  color: #808080;
+}
+.wb-box-title .topic-change {
+  font-size: 12px;
+  font-weight: 400;
+  float: right;
+  color: #696e78;
+}
+.wb-box-title .topic-change span {
+  font-size: 14px;
+  font-weight: 700;
+}
