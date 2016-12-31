@@ -1089,6 +1089,9 @@ fieldset{
     &:not(:last-child){
       .border(right,1px,solid,#d9d9d9);
     }
+    >a{
+      line-height: 18px;
+    }
   }
 }
 
@@ -1233,6 +1236,7 @@ fieldset{
     .fontColor(#696e78);
   }
   >a{
+    margin-top:-4px;
     margin-right: 5px;
     .fl();
   }
@@ -1276,13 +1280,27 @@ fieldset{
   }
 }
 
-.wb-com-item{
+.wb-com-item,.wb-reply-item{
   padding: 11px 0 7px;
   font-size: 12px;
   .border(bottom,1px,solid,#d9d9d9);
+  &:last-child{
+    border: none;
+  }
+  >a{
+    .fontColor(#76a513);
+    margin-top: -4px;
+    padding-bottom: 2px;
+    line-height: 23px;
+    display: block;
+  }
 }
 
-.wb-com-text{
+.wb-com-hasrpy{
+  border: none;
+}
+
+.wb-com-txt,.wb-reply-txt{
   line-height: 23px;
   padding-bottom: 2px;
   margin-top: -6px;
@@ -1292,17 +1310,25 @@ fieldset{
   .fontColor(#76a513);
 }
 
-.wb-com-time{
+.wb-com-time,.wb-reply-time{
   .fl();
   .fontColor(#808080);
   line-height: 16px;
 }
 
-.wb-com-act{
+.wb-com-act,.wb-reply-act{
   .fr();
 }
 
-.wb-com-act-item{
+.wb-com-ft,.wb-reply-ft{
+  &:hover{
+    .wb-com-rep,.wb-reply-rep,.wb-reply-dig{
+      opacity: 1;
+    }
+  }
+}
+
+.wb-com-act-item,.wb-reply-act-item{
   .fl();
   padding: 0 10px;
   &:not(:last-child){
@@ -1320,4 +1346,77 @@ fieldset{
       vertical-align: top;
     }
   }
+}
+
+.wb-com-rep,.wb-reply-rep,.wb-reply-dig{
+  opacity: 0;
+}
+
+.wb-com-reply{
+  .mainBgColor(#EAEAEC);
+  padding: 0 12px;
+  margin: 8px 0 10px;
+}
+
+.wb-com-more{
+  font-size: 12px;
+  margin: 0 -20px;
+  .tc();
+  a{
+    .fontColor();
+    &:hover{
+      .fontColor(@mainColor);
+    }
+  }
+  height: 35px;
+  line-height: 35px;
+  .border(top,1px,solid,#d9d9d9);
+}
+
+.wb-bottom{
+  .mainBgColor();
+}
+
+.wb-bottom-inner{
+  width:1000px;
+  padding: 20px 0 10px 80px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.wb-bottom-list{
+  .fl();
+  margin-right: 70px;
+  display: inline;
+  dt{
+    padding-bottom: 15px;
+    font-size: 16px;
+    width: 138px;
+    .fontColor();
+  }
+  dd{
+    a{
+      display: inline-block;
+      margin: 0 20px 5px 0;
+      width: 48px;
+      font-size: 12px;
+      .fontColor(#808080);
+      &:hover{
+        .fontColor(@mainColor);
+      }
+    }
+    span{
+      display: block;
+      .fl();
+      margin-right: 10px;
+      width: 79px;
+    }
+    .wb-code-txt{
+      width: 109px;
+    }
+  }
+}
+
+.wb-bottom-list-cop dd a{
+  width: 60px;
 }

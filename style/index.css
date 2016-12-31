@@ -905,6 +905,9 @@ fieldset legend a {
 .wb-share-tb .wb-share-tb-item:not(:last-child) {
   border-right: 1px solid #d9d9d9;
 }
+.wb-share-tb .wb-share-tb-item > a {
+  line-height: 18px;
+}
 .wb-ft-com {
   position: relative;
 }
@@ -1038,6 +1041,7 @@ fieldset legend a {
   color: #696e78;
 }
 .wb-com-in-opt > a {
+  margin-top: -4px;
   margin-right: 5px;
   float: left;
 }
@@ -1075,12 +1079,29 @@ fieldset legend a {
 .wb-com-type a.active {
   font-weight: 700;
 }
-.wb-com-item {
+.wb-com-item,
+.wb-reply-item {
   padding: 11px 0 7px;
   font-size: 12px;
   border-bottom: 1px solid #d9d9d9;
 }
-.wb-com-text {
+.wb-com-item:last-child,
+.wb-reply-item:last-child {
+  border: none;
+}
+.wb-com-item > a,
+.wb-reply-item > a {
+  color: #76a513;
+  margin-top: -4px;
+  padding-bottom: 2px;
+  line-height: 23px;
+  display: block;
+}
+.wb-com-hasrpy {
+  border: none;
+}
+.wb-com-txt,
+.wb-reply-txt {
   line-height: 23px;
   padding-bottom: 2px;
   margin-top: -6px;
@@ -1088,30 +1109,111 @@ fieldset legend a {
 .wb-com-username {
   color: #76a513;
 }
-.wb-com-time {
+.wb-com-time,
+.wb-reply-time {
   float: left;
   color: #808080;
   line-height: 16px;
 }
-.wb-com-act {
+.wb-com-act,
+.wb-reply-act {
   float: right;
 }
-.wb-com-act-item {
+.wb-com-ft:hover .wb-com-rep,
+.wb-reply-ft:hover .wb-com-rep,
+.wb-com-ft:hover .wb-reply-rep,
+.wb-reply-ft:hover .wb-reply-rep,
+.wb-com-ft:hover .wb-reply-dig,
+.wb-reply-ft:hover .wb-reply-dig {
+  opacity: 1;
+}
+.wb-com-act-item,
+.wb-reply-act-item {
   float: left;
   padding: 0 10px;
   line-height: 12px;
 }
-.wb-com-act-item:not(:last-child) {
+.wb-com-act-item:not(:last-child),
+.wb-reply-act-item:not(:last-child) {
   border-right: 1px solid #d9d9d9;
 }
-.wb-com-act-item a {
+.wb-com-act-item a,
+.wb-reply-act-item a {
   color: #333333;
 }
-.wb-com-act-item a:hover {
+.wb-com-act-item a:hover,
+.wb-reply-act-item a:hover {
   color: #76a513;
 }
-.wb-com-act-item a span {
+.wb-com-act-item a span,
+.wb-reply-act-item a span {
   margin-right: 5px;
   font-size: 15px;
   vertical-align: top;
+}
+.wb-com-rep,
+.wb-reply-rep,
+.wb-reply-dig {
+  opacity: 0;
+}
+.wb-com-reply {
+  background-color: #eaeaec;
+  padding: 0 12px;
+  margin: 8px 0 10px;
+}
+.wb-com-more {
+  font-size: 12px;
+  margin: 0 -20px;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  border-top: 1px solid #d9d9d9;
+}
+.wb-com-more a {
+  color: #333333;
+}
+.wb-com-more a:hover {
+  color: #eb7350;
+}
+.wb-bottom {
+  background-color: #ffffff;
+}
+.wb-bottom-inner {
+  width: 1000px;
+  padding: 20px 0 10px 80px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.wb-bottom-list {
+  float: left;
+  margin-right: 70px;
+  display: inline;
+}
+.wb-bottom-list dt {
+  padding-bottom: 15px;
+  font-size: 16px;
+  width: 138px;
+  color: #333333;
+}
+.wb-bottom-list dd a {
+  display: inline-block;
+  margin: 0 20px 5px 0;
+  width: 48px;
+  font-size: 12px;
+  color: #808080;
+}
+.wb-bottom-list dd a:hover {
+  color: #eb7350;
+}
+.wb-bottom-list dd span {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  width: 79px;
+}
+.wb-bottom-list dd .wb-code-txt {
+  width: 109px;
+}
+.wb-bottom-list-cop dd a {
+  width: 60px;
 }
