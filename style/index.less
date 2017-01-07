@@ -1395,6 +1395,7 @@ fieldset{
     .fontColor();
   }
   dd{
+    white-space: nowrap;
     a{
       display: inline-block;
       margin: 0 20px 5px 0;
@@ -1404,6 +1405,12 @@ fieldset{
       &:hover{
         .fontColor(@mainColor);
       }
+      &+a{
+        margin-left: -5px;
+      }
+      white-space: nowrap;
+      font-size: 12px;
+      overflow: hidden;
     }
     span{
       display: block;
@@ -1413,10 +1420,58 @@ fieldset{
     }
     .wb-code-txt{
       width: 109px;
+      margin-right: 0;
     }
   }
 }
 
 .wb-bottom-list-cop dd a{
   width: 60px;
+}
+
+.wb-footer{
+  padding: 20px 0 45px;
+  .mainBgColor(#F2F2F5);
+}
+
+.wb-ft-copy{
+  .tc();
+  font-size: 12px;
+  margin-bottom: 10px;
+  .fontColor(#808080);
+  a{
+    .fontColor(inherit);
+    margin-right: 20px;
+    &:hover{
+      .fontColor(#eb7350);
+    }
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+  span{
+    margin-right: 20px;
+  }
+  select{
+    font-size: 12px;
+  }
+}
+
+.wb-ft-logo{
+  display: inline-block;
+  vertical-align: text-top;
+  .imgIcon(-50px,-300px);
+  margin-right: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+.wb-ft-police{
+  margin-right: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  .imgIcon(-100px,-300px);
+  vertical-align: text-top;
+  margin-top: -3px;
 }
